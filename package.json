@@ -5,13 +5,17 @@
   "description": "Modern Portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
+    "sass": "sass -w --no-source-map --style compressed scss/main.scss:dist/css/main.min.css",
+    "deploy": "gh-pages -d dist",
+    "start": "cd dist && live-server --port=3000 --host=localhost --entry-file=index.html"
   },
   "author": "Akshat Mittal",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^3.2.3",
-    "node-sass": "^6.0.1"
+    "gh-pages": "^3.2.3"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.70.0"
   }
 }
