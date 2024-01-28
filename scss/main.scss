@@ -1,5 +1,10 @@
 @import "./config";
 @import "./menu";
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
 	@include background();
 	background-color: $primary-color;
